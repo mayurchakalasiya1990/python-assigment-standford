@@ -15,10 +15,16 @@ def main():
     image = SimpleImage(filename)
 
     # Show the image before the transform
-    image.show()
+    # image.show()
 
     # Apply the filter
     # TODO: your code here
+    for pixel in image:
+        pixel.red = pixel.red * 1.5
+        pixel.blue = pixel.blue * 1.5
+        pixel.green = pixel.red * 0.7
+    # Show the image after the transform
+    image.show()
 
     # Show the image after the transform
     image.show()
